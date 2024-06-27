@@ -51,7 +51,7 @@ public class ShoucangActivity extends AppCompatActivity implements OnVideoListen
     }
     @Override
     public void onClick(Shiping shiping) {
-        Intent intent = new Intent(ShoucangActivity.this, VideoActivity.class);
+        Intent intent = new Intent(ShoucangActivity.this, VideoDetailActivity.class);
         intent.putExtra("detail",shiping.getPath());
         startActivity(intent);
     }

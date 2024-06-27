@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:background="@color/main_color"
+        android:background="#E63998"
         android:layout_width="match_parent"
         android:layout_height="200dp">
         <LinearLayout
@@ -160,7 +160,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
-        android:background="@mipmap/btn_login_blue"
+        android:background="#E63998"
         android:gravity="center"
         android:text="退出"
         android:textColor="@color/white"

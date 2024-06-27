@@ -7,7 +7,7 @@
     <androidx.appcompat.widget.Toolbar
         android:fitsSystemWindows="true"
         app:titleMargin="0dp"
-        android:background="@color/main_color"
+        android:background="#E63998"
         app:contentInsetEnd="0dp"
         app:contentInsetStart="0dp"
         android:layout_width="match_parent"

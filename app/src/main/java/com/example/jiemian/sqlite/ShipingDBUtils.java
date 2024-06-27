@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShipingDBUtils {
-    public static final String DB_NAME = "shiping_dbname";
+    public static final String DB_NAME = "shiping_dbname.db";
 
     public static final int VERSION = 1;
 

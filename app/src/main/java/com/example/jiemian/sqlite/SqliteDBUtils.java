@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class SqliteDBUtils {
 
-    public static final String DB_NAME = "sqlite_dbname";
+    public static final String DB_NAME = "sqlite_dbname.db";
 
     public static final int VERSION = 1;
  

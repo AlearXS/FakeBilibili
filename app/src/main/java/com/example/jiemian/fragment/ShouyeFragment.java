@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.jiemian.R;
 import com.example.jiemian.UI.AddVideoActivity;
 import com.example.jiemian.UI.VideoActivity;
+import com.example.jiemian.UI.VideoDetailActivity;
 import com.example.jiemian.adapter.OnVideoListener;
 import com.example.jiemian.adapter.VideoAdapter;
 import com.example.jiemian.base.LazyFragment;
@@ -144,12 +145,13 @@ public class ShouyeFragment extends LazyFragment implements OnVideoListener {
     @Override
     public void onClick(Shiping shiping) {
         long sTime = System.currentTimeMillis();
-        Intent intent = new Intent(getActivity(), VideoActivity.class);
-        intent.putExtra("detail",shiping.getPath());
+        Intent intent = new Intent(getActivity(), VideoDetailActivity.class);
+        intent.putExtra("detail", shiping.getPath());
         long eTime = System.currentTimeMillis();
-        Log.i("从点击视频到播放视频使用的时间为: ", String.valueOf(eTime-sTime) + "ms");
+        Log.i("从点击视频到播放视频使用的时间为: ", String.valueOf(eTime - sTime) + "ms");
         startActivity(intent);
     }
+
 
     /**
      *  收藏视频

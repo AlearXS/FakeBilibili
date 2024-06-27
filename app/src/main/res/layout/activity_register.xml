@@ -88,7 +88,7 @@
         android:textStyle="bold"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:background="@mipmap/btn_login_blue"
+        android:background="#E63998"
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"/>
