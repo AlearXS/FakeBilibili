@@ -1,0 +1,88 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_about.xml" value="0.1671875" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_add_video.xml" value="0.1671875" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_change_userinfo.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_changetuser.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_detail.xml" value="0.1671875" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_jilu.xml" value="0.1671875" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_jsregister.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_login.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_main.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_manager.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_register.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_shoucang.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_video.xml" value="0.1671875" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/activity_xiaoxi.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/fragment_home.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/fragment_shipingl.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/fragment_shouye.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/fragment_tuser.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/fragment_user.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/fragment_zhishi.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/item_jilu.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/item_memo.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shipinfenlei/shipin/app/src/main/res/layout/item_video.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_add_video.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/3YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_register.xml" value="0.17916666666666667" />
+        <entry key="..\:/xm/3YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_zhishi.xml" value="0.1" />
+        <entry key="..\:/xm/3YJ4.3/shufa/1/shufa/app/src/main/res/layout/item_home_luntan.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.21/jibing560jiao/jibing2/app/src/main/res/layout/activity_main.xml" value="0.17916666666666667" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_add_video.xml" value="0.22" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_add_zhi.xml" value="0.10104166666666667" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_addmoban.xml" value="0.1" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_changetuser.xml" value="0.10104166666666667" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_chanhezhi.xml" value="0.1" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_chengji.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_daka.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_jsregister.xml" value="0.1" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_main.xml" value="0.11145833333333334" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_manager.xml" value="0.11145833333333334" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_moban.xml" value="0.1" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_tm_video_detail.xml" value="0.21472019464720193" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_video.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/activity_zhishi.xml" value="0.10104166666666667" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_chengji.xml" value="0.11145833333333334" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_jluntan.xml" value="0.1" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_luntan.xml" value="0.1" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_moban.xml" value="0.1" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_shipingl.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_shouye.xml" value="0.10104166666666667" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_tuser.xml" value="0.10104166666666667" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_user.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/fragment_zhishi.xml" value="0.10104166666666667" />
+        <entry key="..\:/xm/YJ4.3/shufa/1/shufa/app/src/main/res/layout/item_video.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/drawable/bian1.xml" value="0.136" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_about.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_add_zhi.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_chanhezhi.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_jilu.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_login.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_main.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_manager.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_pinglun.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_send_luntan.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_tiezi.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_video.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_xiaoxi.xml" value="0.16927083333333334" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/activity_zhishi.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/fragment_luntan.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/fragment_shouye.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/fragment_user.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/fragment_zhishi.xml" value="0.10235507246376811" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/item_home_luntan.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/layout/item_video.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/jibing2/app/src/main/res/menu/popupmenu.xml" value="0.18385416666666668" />
+        <entry key="..\:/xm/YJ4.3/shufa/shufa/app/src/main/res/layout/activity_login.xml" value="0.18385416666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

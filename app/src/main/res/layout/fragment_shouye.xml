@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/toobar"/>
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/login_input_bg"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_bg"
+            android:hint="请输入搜索信息"
+            android:paddingLeft="15dp"
+            android:textColorHint="@color/black" />
+        <TextView
+            android:layout_marginRight="10dp"
+            android:id="@+id/tv_search"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="搜索"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/quanbu"
+            android:text="全部"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:background="@drawable/quanbu"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/bihua"
+            android:text="生活"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:background="@drawable/shenghuo"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/zitie"
+            android:text="记录"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@drawable/jilu"
+            android:textColor="#000"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/kaiti"
+            android:text="影视"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="@drawable/yingshi"
+            android:textColor="#000"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_tm"
+            android:layout_width="match_parent"
+            android:layout_height="591dp"
+            android:layout_marginTop="8dp" />
+
+        <ImageView
+    android:id="@+id/add"
+    android:src="@mipmap/add"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_margin="@dimen/dp_20"
+    android:layout_width="@dimen/dp_50"
+    android:layout_height="@dimen/dp_50"/>
+    </RelativeLayout>
+</LinearLayout>
