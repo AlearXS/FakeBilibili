@@ -15,7 +15,13 @@ public class VideoAdapter extends BaseQuickAdapter<Shiping, BaseViewHolder> {
     private Context context;
     private OnVideoListener listener;
     public VideoAdapter(Context context,OnVideoListener listener) {
+
         super(R.layout.item_video);
+        this.context = context;
+        this.listener = listener;
+    }
+    public VideoAdapter(Context context,OnVideoListener listener, int type) {
+        super(R.layout.item_shoucang_video);
         this.context = context;
         this.listener = listener;
     }

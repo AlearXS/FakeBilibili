@@ -45,9 +45,9 @@ public class ShipingHelper  extends SQLiteOpenHelper {
         db.execSQL("insert into Shiping (title, path, type, tupian, level) values (?, ?, ?, ?, ?)",
                 new String[]{"海滨落日", "/storage/emulated/0/Movies/jl2.mp4", "2", "/storage/emulated/0/Pictures/jl2.png", "记录"});
         db.execSQL("insert into Shiping (title, path, type, tupian, level) values (?, ?, ?, ?, ?)",
-                new String[]{"肖申克的救赎", "/storage/emulated/0/Movies/ys1.mp4", "3", "/storage/emulated/0/Pictures/ys1.png", "影视"});
+                new String[]{"肖申克的救赎", "/storage/emulated/0/Movies/ys1.mp4", "1", "/storage/emulated/0/Pictures/ys1.png", "影视"});
         db.execSQL("insert into Shiping (title, path, type, tupian, level) values (?, ?, ?, ?, ?)",
-                new String[]{"你的名字", "/storage/emulated/0/Movies/ys2.mp4", "3", "/storage/emulated/0/Pictures/ys2.png", "影视"});
+                new String[]{"你的名字", "/storage/emulated/0/Movies/ys2.mp4", "1", "/storage/emulated/0/Pictures/ys2.png", "影视"});
     }
 }
 

@@ -7,9 +7,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jiemian.R;
 import com.example.jiemian.adapter.OnVideoListener;
@@ -40,7 +42,7 @@ public class ShoucangActivity extends AppCompatActivity implements OnVideoListen
         setContentView(R.layout.activity_shoucang);
         ButterKnife.bind(this);
         tvTitle.setText("我的收藏");
-        videoAdapter = new VideoAdapter(ShoucangActivity.this,this);
+        videoAdapter = new VideoAdapter(ShoucangActivity.this,this, 1);
         rlTm.setLayoutManager(new LinearLayoutManager(ShoucangActivity.this));
         userList = ShipingDBUtils.getInstance(ShoucangActivity.this).FindAllByType("2");
         rlTm.addItemDecoration(new DividerItemDecoration(ShoucangActivity.this, DividerItemDecoration.VERTICAL));
@@ -58,8 +60,15 @@ public class ShoucangActivity extends AppCompatActivity implements OnVideoListen
 
     @Override
     public void onClick1(Shiping shiping) {
-
-
+        long sTime = System.currentTimeMillis();
+        shiping.setType("1");
+        ShipingDBUtils.getInstance(this).change(this,shiping);
+        userList.remove(shiping);
+        videoAdapter.setNewData(userList); // 更新数据集
+        videoAdapter.notifyDataSetChanged(); // 通知数据变化
+        long eTime = System.currentTimeMillis();
+        Log.i("收藏视频使用的时间为: ", String.valueOf(eTime-sTime) + "ms");
+        Toast.makeText(this,"取消收藏成功",Toast.LENGTH_SHORT).show();
     }
 
 }
