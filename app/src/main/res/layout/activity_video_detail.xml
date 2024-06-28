@@ -25,6 +25,8 @@
             android:text="Play/Pause" />
 
 
+
+
     </RelativeLayout>
 
     <!-- Comment section (RecyclerView for displaying comments) -->
@@ -47,6 +49,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="发表"
+        android:textSize="18sp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="8dp" />
+
+
+
 </LinearLayout>
