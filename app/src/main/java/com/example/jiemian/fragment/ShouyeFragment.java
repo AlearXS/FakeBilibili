@@ -146,7 +146,7 @@ public class ShouyeFragment extends LazyFragment implements OnVideoListener {
     public void onClick(Shiping shiping) {
         long sTime = System.currentTimeMillis();
         Intent intent = new Intent(getActivity(), VideoDetailActivity.class);
-        intent.putExtra("detail", shiping.getPath());
+        intent.putExtra("detail",String.valueOf(shiping.getId()));
         long eTime = System.currentTimeMillis();
         Log.i("从点击视频到播放视频使用的时间为: ", String.valueOf(eTime - sTime) + "ms");
         startActivity(intent);

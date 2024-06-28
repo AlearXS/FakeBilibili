@@ -2,12 +2,10 @@ package com.example.jiemian.UI;
 
 import android.content.ContentValues;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.VideoView;
@@ -17,10 +15,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.jiemian.R;
 import com.example.jiemian.adapter.CommentAdapter;
+import com.example.jiemian.network.RetrofitClient;
+import com.example.jiemian.network.VideoApiService;
+import com.example.jiemian.network.VideoResponse;
 import com.example.jiemian.sqlite.CommentDatabaseHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
 
 public class VideoDetailActivity extends AppCompatActivity {
     private VideoView videoView;
@@ -35,7 +41,6 @@ public class VideoDetailActivity extends AppCompatActivity {
     private CommentDatabaseHelper dbHelper;
     private String videoPath;
     private boolean isPlaying = true;
-    private boolean isFullscreen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +53,15 @@ public class VideoDetailActivity extends AppCompatActivity {
         commentSubmitButton = findViewById(R.id.commentSubmitButton);
         playPauseButton = findViewById(R.id.playPauseButton);
 
-
         Intent intent = getIntent();
-        videoPath = intent.getStringExtra("detail");
+        String videoId = intent.getStringExtra("detail");
 
-        // Set the video path to the VideoView
-        videoView.setVideoPath(videoPath);
-        videoView.start();
+        if (videoId == null || videoId.isEmpty()) {
+            Log.e("VideoDetailActivity", "Video ID is null or empty");
+            return;
+        }
+
+        fetchVideoInfo(videoId);
 
         // Initialize the comment list and adapter
         comments = new ArrayList<>();
@@ -66,14 +73,14 @@ public class VideoDetailActivity extends AppCompatActivity {
         dbHelper = new CommentDatabaseHelper(this);
 
         // Load existing comments from the database
-        loadCommentsFromDatabase();
+        loadCommentsFromDatabase(videoId);
 
         // Set click listener for the submit button
         commentSubmitButton.setOnClickListener(v -> {
             String newComment = commentInput.getText().toString();
             if (!newComment.isEmpty()) {
                 // Add the new comment to the database and update the adapter
-                saveCommentToDatabase(newComment);
+                saveCommentToDatabase(newComment, videoId);
                 comments.add(newComment);
                 commentAdapter.notifyItemInserted(comments.size() - 1);
                 commentInput.setText(""); // Clear the input field
@@ -84,24 +91,47 @@ public class VideoDetailActivity extends AppCompatActivity {
         playPauseButton.setOnClickListener(v -> {
             if (isPlaying) {
                 videoView.pause();
-                playPauseButton.setText("Play");
+                playPauseButton.setText("播放");
             } else {
                 videoView.start();
-                playPauseButton.setText("Pause");
+                playPauseButton.setText("暂停");
             }
             isPlaying = !isPlaying;
         });
-
-
     }
 
-    private void loadCommentsFromDatabase() {
+    private void fetchVideoInfo(String videoId) {
+        Retrofit retrofit = RetrofitClient.getRetrofitInstance();
+        VideoApiService apiService = retrofit.create(VideoApiService.class);
+        Call<VideoResponse> call = apiService.getVideoInfo(videoId);
+
+        call.enqueue(new Callback<VideoResponse>() {
+            @Override
+            public void onResponse(Call<VideoResponse> call, Response<VideoResponse> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    VideoResponse videoResponse = response.body();
+                    videoPath = videoResponse.getVideoUrl();
+                    videoView.setVideoPath(videoPath);
+                    videoView.start();
+                } else {
+                    Log.e("VideoDetailActivity", "Response unsuccessful or body is null");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<VideoResponse> call, Throwable t) {
+                Log.e("VideoDetailActivity", "Failed to fetch video info", t);
+            }
+        });
+    }
+
+    private void loadCommentsFromDatabase(String videoId) {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor cursor = db.query(
                 CommentDatabaseHelper.TABLE_COMMENTS,
                 new String[]{CommentDatabaseHelper.COLUMN_COMMENT},
                 CommentDatabaseHelper.COLUMN_VIDEO_PATH + "=?",
-                new String[]{videoPath},
+                new String[]{videoId},
                 null, null, null
         );
 
@@ -115,29 +145,11 @@ public class VideoDetailActivity extends AppCompatActivity {
         }
     }
 
-    private void saveCommentToDatabase(String comment) {
+    private void saveCommentToDatabase(String comment, String videoId) {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(CommentDatabaseHelper.COLUMN_VIDEO_PATH, videoPath);
+        values.put(CommentDatabaseHelper.COLUMN_VIDEO_PATH, videoId);
         values.put(CommentDatabaseHelper.COLUMN_COMMENT, comment);
         db.insert(CommentDatabaseHelper.TABLE_COMMENTS, null, values);
-    }
-
-    private void enterFullscreen() {
-        getSupportActionBar().hide();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        ViewGroup.LayoutParams params = videoView.getLayoutParams();
-        params.width = ViewGroup.LayoutParams.MATCH_PARENT;
-        params.height = ViewGroup.LayoutParams.MATCH_PARENT;
-        videoView.setLayoutParams(params);
-    }
-
-    private void exitFullscreen() {
-        getSupportActionBar().show();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        ViewGroup.LayoutParams params = videoView.getLayoutParams();
-        params.width = ViewGroup.LayoutParams.MATCH_PARENT;
-        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-        videoView.setLayoutParams(params);
     }
 }
